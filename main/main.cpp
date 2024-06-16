@@ -19,7 +19,7 @@
 
 #define USE_LV_LOG 1
 
-#include <buzzer.h>
+#include "./include/buzzer.h"
 
 #define _GUI_TAG "GUI_TASK"
 

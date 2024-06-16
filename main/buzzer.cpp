@@ -44,7 +44,7 @@ void buzzer_init(void) {
   ledc_channel.timer_sel  = LEDC_TIMER;
   ledc_channel.intr_type  = LEDC_INTR_DISABLE;
   ledc_channel.gpio_num   = LEDC_OUTPUT_IO;
-  ledc_channel.duty       = 0;  // Set duty to 0%
+  ledc_channel.duty       = 4000;  // Set duty to 0%
   ledc_channel.hpoint     = 0;
 
   ESP_ERROR_CHECK(ledc_channel_config(&ledc_channel));
@@ -52,10 +52,10 @@ void buzzer_init(void) {
 
 void buzzer_start(void) {
   buzzer_init();
-  ESP_LOGW("####", "buzzer_start duty: %d", (int)get_duty_by_level(12));
+  ESP_LOGW("####", "buzzer_start duty: %d", (int)get_duty_by_level(11));
   // Set duty
   ESP_ERROR_CHECK(
-    ledc_set_duty(LEDC_MODE, LEDC_CHANNEL, get_duty_by_level(12)));
+    ledc_set_duty(LEDC_MODE, LEDC_CHANNEL, get_duty_by_level(11)));
   // Update duty to apply the new value
   ESP_ERROR_CHECK(ledc_update_duty(LEDC_MODE, LEDC_CHANNEL));
   _playing = true;
