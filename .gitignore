@@ -1,0 +1,83 @@
+# Prerequisites
+*.d
+
+# Object files
+*.o
+*.ko
+*.obj
+*.elf
+
+# Linker output
+*.ilk
+*.map
+*.exp
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Libraries
+*.lib
+*.a
+*.la
+*.lo
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Kernel Module Compile Results
+*.mod*
+*.cmd
+.tmp_versions/
+modules.order
+Module.symvers
+Mkfile.old
+dkms.conf
+
+# OS files
+.DS_Store
+
+build/
+sdkconfig.old
+
+# Jetbrains CLion IDE
+cmake-build-debug/
+.idea/
+
+# PlatformIO
+.pio/
+platformio.ini
+
+# VS Code
+.vscode/c_cpp_properties.json
+
+# Temp
+.temp
+dependencies.lock
+spiffs.bin
+spiffs/font/*.bin
+
+# Simulator
+simulator/main/flicker
+simulator/main/.nvs/*
+!simulator/main/.nvs/README.md
+
+# scripts
+scripts/serial_number/bin
