@@ -15,12 +15,13 @@
 
 #define LEDC_TIMER LEDC_TIMER_0
 #define LEDC_MODE LEDC_LOW_SPEED_MODE
-#ifdef CONFIG_IDF_TARGET_ESP32S3
-#define LEDC_OUTPUT_IO GPIO_NUM_13  // for esp32-s3 board
-#else
-#define LEDC_OUTPUT_IO GPIO_NUM_12  // for esp32 board
 #define LEDC_CHANNEL LEDC_CHANNEL_0
 
+#ifdef CONFIG_IDF_TARGET_ESP32S3
+  #define LEDC_OUTPUT_IO GPIO_NUM_13  // for esp32-s3 board
+#else
+  #define LEDC_OUTPUT_IO GPIO_NUM_12  // for esp32 board
+#endif
 // Duty resolution document: https://www.espressif.com.cn/sites/default/files/documentation/esp32_technical_reference_manual_en.pdf#table.14.1
 #define LEDC_DUTY_RES LEDC_TIMER_13_BIT  // Set duty resolution to 13 bits
 
