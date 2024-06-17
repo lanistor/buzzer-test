@@ -15,7 +15,10 @@
 
 #define LEDC_TIMER LEDC_TIMER_0
 #define LEDC_MODE LEDC_LOW_SPEED_MODE
-#define LEDC_OUTPUT_IO GPIO_NUM_13  // for s3 board
+#ifdef CONFIG_IDF_TARGET_ESP32S3
+#define LEDC_OUTPUT_IO GPIO_NUM_13  // for esp32-s3 board
+#else
+#define LEDC_OUTPUT_IO GPIO_NUM_12  // for esp32 board
 #define LEDC_CHANNEL LEDC_CHANNEL_0
 
 // Duty resolution document: https://www.espressif.com.cn/sites/default/files/documentation/esp32_technical_reference_manual_en.pdf#table.14.1
