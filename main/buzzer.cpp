@@ -52,10 +52,10 @@ void buzzer_init(void) {
 
 void buzzer_start(void) {
   buzzer_init();
-  ESP_LOGW("####", "buzzer_start duty: %d", (int)get_duty_by_level(11));
+  ESP_LOGW("####", "buzzer_start duty: %d", (int)get_duty_by_level(12));
   // Set duty
   ESP_ERROR_CHECK(
-    ledc_set_duty(LEDC_MODE, LEDC_CHANNEL, get_duty_by_level(11)));
+    ledc_set_duty(LEDC_MODE, LEDC_CHANNEL, get_duty_by_level(12)));
   // Update duty to apply the new value
   ESP_ERROR_CHECK(ledc_update_duty(LEDC_MODE, LEDC_CHANNEL));
   _playing = true;
